@@ -21,4 +21,10 @@ function tambah($data) {
     return mysqli_affected_rows($hub);
 }
 
+function hapus($id) {
+    global $hub;
+    mysqli_query($hub, "DELETE FROM guru WHERE id=$id;");
+    return mysqli_affected_rows($hub);
+}
+
 ?>
