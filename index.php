@@ -1,5 +1,5 @@
 <?php 
-    $hub = mysqli_connect("localhost", "root", "Frozzyt123", "sekolah_dasar");
+    $hub = mysqli_connect("localhost", "root", "", "sekolah_dasar");
 
     $query = mysqli_query($hub, "SELECT * FROM guru");
 
@@ -39,7 +39,7 @@
                             "<td>".$row["usia"]."</td>".
                             "<td>".$row["alamat"]."</td>".
                             "<td>".$row["gaji"]."</td>".
-                            "<td class='text-primary'>"."<a href='tambah.php' class='text-decoration-none'>Edit</a>". "<a class='text-decoration-none'> | </a>" ."<a href=delete.php?id=". $row['id'] ." class='hover text-decoration-none'>Delete</a>"."</td>".
+                            "<td class='text-primary'>"."<a href='edit.php?id=". $row['id'] ."' class='text-decoration-none'>Edit</a>". "<a class='text-decoration-none'> | </a>" ."<a href=delete.php?id=". $row['id'] ." class='hover text-decoration-none'>Delete</a>"."</td>".
                         "</tr>";
                     }
                 echo '</table>'
