@@ -31,59 +31,61 @@ if(isset($_POST["tambah"])) {
     <title>Tambah Data Guru</title>
 </head>
 <body>
-    <div>
-        <div>
+    <div class="d-flex  justify-content-center align-items-center min-vh-100">
+        <div class="p-4 bg-primary text-white rounded fw-medium w-25 d-flex justify-content-center">
             <form action="" method="POST">
                 <div>
-                    <div>
+                    <div class="mt-2">
                         <div>
-                            <label for="" >ID</label>
+                            <label for="" class="fs-6">Id</label>
                         </div>
                         <div>
-                            <input type="text" required name="id">
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <label for="" >NAMA</label>
-                        </div>
-                        <div>
-                            <input type="text" required name="nama">
+                            <input type="text" required name="id" class="rounded border-0">
                         </div>
                     </div>
-                    <div>
+                    <div class="mt-2">
                         <div>
-                            <label for="" >MATKUL_DIAJAR</label>
+                            <label for="" >Nama</label>
                         </div>
                         <div>
-                            <input type="text" required name="matkul_diajar">
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <label for="" >USIA</label>
-                        </div>
-                        <div>
-                            <input type="number" required name="usia">
+                            <input type="text" required name="nama" class="rounded border-0">
                         </div>
                     </div>
-                    <div>
+                    <div class="mt-2">
                         <div>
-                            <label for="" >ALAMAT</label>
+                            <label for="" >Mata Kuliah</label>
                         </div>
                         <div>
-                            <input type="text" required name="alamat">
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <label for="" >GAJI</label>
-                        </div>
-                        <div>
-                            <input type="number" required name="gaji">
+                            <input type="text" required name="matkul_diajar" class="rounded border-0">
                         </div>
                     </div>
-                    <button class="btn btn-primary" name="tambah" type="submit" >Tambah</button>
+                    <div class="mt-2">
+                        <div>
+                            <label for="" >Usia</label>
+                        </div>
+                        <div>
+                            <input type="number" required name="usia" class="rounded border-0">
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <div>
+                            <label for="" >Alamat</label>
+                        </div>
+                        <div>
+                            <input type="text" required name="alamat" class="rounded border-0">
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <div>
+                            <label for="" >Gaji</label>
+                        </div>
+                        <div>
+                            <input type="number" required name="gaji" class="rounded border-0">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-4">
+                        <button class="btn btn-light fw-medium" name="tambah" type="submit" >Tambah</button>
+                    </div>
                 </div>
             </form>
         </div>
