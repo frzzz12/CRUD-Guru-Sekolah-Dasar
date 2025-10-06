@@ -8,7 +8,7 @@ $id = $_GET['id'];
 $mhs = query("SELECT * FROM guru WHERE id=$id")[0];
 
 
-$hub = mysqli_connect("localhost", "root", "", "sekolah_dasar");
+$hub = mysqli_connect("localhost", "root", "Frozzyt123", "sekolah_dasar");
 
 if(isset($_POST["ubah"])) {
 

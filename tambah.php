@@ -2,7 +2,7 @@
 
 require 'function.php';
 
-$hub = mysqli_connect("localhost", "root", "", "sekolah_dasar");
+$hub = mysqli_connect("localhost", "root", "Frozzyt123", "sekolah_dasar");
 
 if(isset($_POST["tambah"])) {
 
@@ -33,6 +33,7 @@ if(isset($_POST["tambah"])) {
 <body>
     <div class="d-flex  justify-content-center align-items-center min-vh-100" style="background-color: #EAEAEA">
         <div class="p-4 bg-primary text-white rounded fw-medium w-25 d-flex justify-content-center">
+            
             <form action="" method="POST">
                 <div>
                     <div class="mt-2">

@@ -1,7 +1,13 @@
 <?php 
-    $hub = mysqli_connect("localhost", "root", "", "sekolah_dasar");
+
+    require 'function.php';
+    $hub = mysqli_connect("localhost", "root", "Frozzyt123", "sekolah_dasar");
 
     $query = mysqli_query($hub, "SELECT * FROM guru");
+
+    if(isset($_POST['cari'])) {
+        $query = cari($_POST['search']);
+    };
 
 ?>
 
@@ -16,9 +22,18 @@
 <body>
     <div class="m-3">
         <div>
-            <div>
+            <div class="d-flex">
                 <button class="btn btn-primary"><a href="tambah.php" class="text-white text-decoration-none">Tambah data</a></button>
+                <div class="ms-3">
+                    <form action="" method="post">
+
+                        <input type="text" name="search" size="30" autofocus placeholder="Masukkan Keyword" autocomplete="off">
+                        <button type="submit" class="border-1 rounded" name="cari">Cari</button>
+                    
+                    </form>
+                </div>
             </div>
+            
             <div>
                 <?php 
                 echo "<table class='table my-2 rounded table-primary table-hover table-striped-columns border-2'>";
@@ -31,7 +46,7 @@
                         <th>Gaji</th>
                         <th>Aksi</th>
                     </tr>";
-                    while($row = mysqli_fetch_assoc($query)) {
+                    foreach($query as $row) {
                         echo "<tr>".
                             "<td>".$row["id"]."</td>".
                             "<td>".$row["nama"]."</td>".

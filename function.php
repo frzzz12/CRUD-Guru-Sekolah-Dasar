@@ -1,5 +1,5 @@
 <?php 
-$hub = mysqli_connect("localhost", "root", "", "sekolah_dasar");
+$hub = mysqli_connect("localhost", "root", "Frozzyt123", "sekolah_dasar");
 
 function tambah($data) {
     global $hub;
@@ -59,6 +59,19 @@ function ubah($data) {
     mysqli_query($hub, $query);
 
     return mysqli_affected_rows($hub);
+}
+
+
+function cari($search) {
+    $kru = "SELECT * FROM guru 
+    WHERE
+    nama LIKE '%$search%' OR 
+    matkul_diajar LIKE '%$search%' OR
+    usia LIKE '%$search%' OR 
+    alamat LIKE '%$search%' OR
+    gaji LIKE '%$search%' 
+    ";
+    return query($kru);
 }
 
 ?>
