@@ -33,15 +33,15 @@ if(isset($_POST["tambah"])) {
 <body>
     <div class="d-flex  justify-content-center align-items-center min-vh-100" style="background-color: #EAEAEA">
         <div class="p-4 bg-primary text-white rounded fw-medium w-25 d-flex justify-content-center">
-            
             <form action="" method="POST">
+                <h3 class="text-center mb-3">Tambah Data</h3>
                 <div>
                     <div class="mt-2">
                         <div>
                             <label for="" class="fs-6">Id</label>
                         </div>
                         <div>
-                            <input type="text" required name="id" class="rounded border-0">
+                            <input type="text" required name="id" class="rounded border-0" autocomplete="off" autofocus>
                         </div>
                     </div>
                     <div class="mt-2">
@@ -49,7 +49,7 @@ if(isset($_POST["tambah"])) {
                             <label for="" >Nama</label>
                         </div>
                         <div>
-                            <input type="text" required name="nama" class="rounded border-0">
+                            <input type="text" required name="nama" class="rounded border-0" autocomplete="off">
                         </div>
                     </div>
                     <div class="mt-2">
@@ -57,7 +57,7 @@ if(isset($_POST["tambah"])) {
                             <label for="" >Mata Kuliah</label>
                         </div>
                         <div>
-                            <input type="text" required name="matkul_diajar" class="rounded border-0">
+                            <input type="text" required name="matkul_diajar" class="rounded border-0" autocomplete="off">
                         </div>
                     </div>
                     <div class="mt-2">
@@ -65,7 +65,7 @@ if(isset($_POST["tambah"])) {
                             <label for="" >Usia</label>
                         </div>
                         <div>
-                            <input type="number" required name="usia" class="rounded border-0">
+                            <input type="number" required name="usia" class="rounded border-0" autocomplete="off">
                         </div>
                     </div>
                     <div class="mt-2">
@@ -73,7 +73,7 @@ if(isset($_POST["tambah"])) {
                             <label for="" >Alamat</label>
                         </div>
                         <div>
-                            <input type="text" required name="alamat" class="rounded border-0">
+                            <input type="text" required name="alamat" class="rounded border-0" autocomplete="off">
                         </div>
                     </div>
                     <div class="mt-2">
@@ -81,7 +81,7 @@ if(isset($_POST["tambah"])) {
                             <label for="" >Gaji</label>
                         </div>
                         <div>
-                            <input type="number" required name="gaji" class="rounded border-0">
+                            <input type="number" required name="gaji" class="rounded border-0" autocomplete="off">
                         </div>
                     </div>
                     <div class="d-flex justify-content-center mt-4">
