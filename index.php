@@ -20,15 +20,18 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <div class="m-3">
+    <h3 class="text-center mt-4 fw-bold">Daftar Guru Sekolah Dasar</h3>
+    <hr>
+    <div class="mx-3">
         <div>
             <div class="d-flex">
-                <button class="btn btn-primary"><a href="tambah.php" class="text-white text-decoration-none">Tambah data</a></button>
+                <button class="btn btn-primary"><a href="tambah.php" class="text-white text-decoration-none fw-medium">Tambah data</a></button>
                 <div class="ms-3">
                     <form action="" method="post">
-
-                        <input type="text" name="search" size="30" autofocus placeholder="Masukkan Keyword" autocomplete="off">
-                        <button type="submit" class="border-1 rounded" name="cari">Cari</button>
+                        <div class="d-flex gap-3">
+                            <input type="text" class="form-control" name="search" size="30" autofocus placeholder="Masukkan Keyword" autocomplete="off">
+                            <button type="submit" class="border-1 rounded bg-primary text-white btn fw-medium" name="cari">Cari</button>
+                        </div>
                     
                     </form>
                 </div>
