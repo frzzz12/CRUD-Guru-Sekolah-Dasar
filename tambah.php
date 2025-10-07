@@ -6,6 +6,7 @@ $hub = mysqli_connect("localhost", "root", "Frozzyt123", "sekolah_dasar");
 
 if(isset($_POST["tambah"])) {
 
+
     if(tambah($_POST > 0 )) {
         echo "<script>
         alert('data berhasil ditambahkan!')
@@ -33,7 +34,7 @@ if(isset($_POST["tambah"])) {
 <body>
     <div class="d-flex  justify-content-center align-items-center min-vh-100" style="background-color: #EAEAEA">
         <div class="p-4 bg-primary text-white rounded fw-medium w-25 d-flex justify-content-center">
-            <form action="" method="POST">
+            <form action="" method="POST" enctype="multipart/form-data">
                 <h3 class="text-center mb-3">Tambah Data</h3>
                 <div>
                     <div class="mt-2">
@@ -82,6 +83,14 @@ if(isset($_POST["tambah"])) {
                         </div>
                         <div>
                             <input type="number" required name="gaji" class="rounded border-0" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <div>
+                            <label for="" >Foto</label>
+                        </div>
+                        <div>
+                            <input type="file" required name="foto" class="rounded border-0" autocomplete="off">
                         </div>
                     </div>
                     <div class="d-flex justify-content-center mt-4">

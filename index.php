@@ -47,6 +47,7 @@
                         <th>Usia</th>
                         <th>Alamat</th>
                         <th>Gaji</th>
+                        <th>Foto</th>
                         <th>Aksi</th>
                     </tr>";
                     foreach($query as $row) {
@@ -57,6 +58,7 @@
                             "<td>".$row["usia"]."</td>".
                             "<td>".$row["alamat"]."</td>".
                             "<td>".$row["gaji"]."</td>".
+                            "<td>".$row["foto"]."</td>".
                             "<td class='text-primary'>"."<a href='edit.php?id=". $row['id'] ."' class='text-decoration-none'>Edit</a>". "<a class='text-decoration-none'> | </a>" ."<a href=delete.php?id=". $row['id'] ." class='hover text-decoration-none'>Delete</a>"."</td>".
                         "</tr>";
                     }

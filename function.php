@@ -11,15 +11,50 @@ function tambah($data) {
     $alamat = htmlspecialchars($_POST["alamat"]);
     $gaji = htmlspecialchars($_POST["gaji"]);
 
+    $foto = upload();
+
+    if(!$foto) {
+        return false;
+    };
+
     $query = "INSERT INTO guru
                 VALUES
-                ('$id', '$nama', '$matkul', '$usia', '$alamat', '$gaji');
+                ('$id', '$nama', '$matkul', '$usia', '$alamat', '$gaji', '$foto');
     ";
 
     mysqli_query($hub, $query);
 
     return mysqli_affected_rows($hub);
 }
+
+
+
+function upload() {
+    $namaFile = $_FILES['foto']['name'];
+    $tmp = $_FILES['foto']['tmp_name'];
+    $size = $_FILES['foto']['size'];
+    $error = $_FILES['foto']['error'];
+
+    if($error === 4) {
+        echo "<script>
+            alert('silahkan pilih gambar dulu');
+            return false;
+        </script>";
+    };
+
+    $ekstensiGambar = ['jpg', 'jpeg', 'png'];
+    $eksgambar = explode('.', $namaFile);
+    $eksgambar = strtolower(end($eksgambar));
+    if(!in_array($eksgambar, $ekstensiGambar)) {
+        echo "<script>
+            alert('yang kamu upload bukan gambar');
+            return false;
+        </script>";
+    };
+
+
+};
+
 
 function query($query) {
         global $hub;
