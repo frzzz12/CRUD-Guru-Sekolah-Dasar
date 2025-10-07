@@ -38,8 +38,8 @@ function upload() {
     if($error === 4) {
         echo "<script>
             alert('silahkan pilih gambar dulu');
-            return false;
-        </script>";
+            </script>";
+        return false;
     };
 
     $ekstensiGambar = ['jpg', 'jpeg', 'png'];
@@ -48,9 +48,24 @@ function upload() {
     if(!in_array($eksgambar, $ekstensiGambar)) {
         echo "<script>
             alert('yang kamu upload bukan gambar');
-            return false;
-        </script>";
+            </script>";
+        return false;
     };
+
+    if($size > 1000000) {
+        echo "<script>
+            alert('ukuran foto terlalu besar');
+            </script>";
+        return false;
+    }
+
+    $namafileBaru = uniqid();
+    $namafileBaru .= '.';
+    $namafileBaru .= $eksgambar;
+
+    move_uploaded_file($tmp, 'img/' . $namafileBaru);
+
+    return $namafileBaru;
 
 
 };
@@ -81,13 +96,25 @@ function ubah($data) {
     $usia = htmlspecialchars($data["usia"]);
     $alamat = htmlspecialchars($data["alamat"]);
     $gaji = htmlspecialchars($data["gaji"]);
+    $fotoLama = htmlspecialchars($data["gambarLama"]);
+
+
+
+    if( $_FILES['foto']['error'] === 4) {
+        $foto = $fotoLama;
+    } else {
+        $foto = upload();
+    };
+
+
 
     $query = "UPDATE guru SET 
             nama = '$nama', 
             matkul_diajar = '$matkul', 
             usia = '$usia', 
             alamat = '$alamat', 
-            gaji = '$gaji' 
+            gaji = '$gaji',
+            foto = '$foto' 
             WHERE id = $id;
     ";
 

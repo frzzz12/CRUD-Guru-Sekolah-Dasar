@@ -58,7 +58,9 @@
                             "<td>".$row["usia"]."</td>".
                             "<td>".$row["alamat"]."</td>".
                             "<td>".$row["gaji"]."</td>".
-                            "<td>".$row["foto"]."</td>".
+                            "<td>".
+                            "<img src='img/".$row['foto']."' alt='Foto' width='25' height='30'>".
+                            "</td>".
                             "<td class='text-primary'>"."<a href='edit.php?id=". $row['id'] ."' class='text-decoration-none'>Edit</a>". "<a class='text-decoration-none'> | </a>" ."<a href=delete.php?id=". $row['id'] ." class='hover text-decoration-none'>Delete</a>"."</td>".
                         "</tr>";
                     }
