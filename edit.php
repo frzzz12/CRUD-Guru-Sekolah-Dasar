@@ -38,7 +38,9 @@ if(isset($_POST["ubah"])) {
 </head>
 <body>
     <div class="min-vh-100 d-flex justify-content-center align-items-center">
-        <div class="bg-primary text-white p-4">
+        <div class="bg-primary text-white p-4 rounded fw-semibold">
+            <h3 class="text-center">Edit Data</h3>
+            <hr>
             <div class="d-flex justify-content-center">
                 <form action="" method="POST" enctype="multipart/form-data">
                     <input type="hidden" value="<?=$mhs['id']?>">
@@ -46,51 +48,51 @@ if(isset($_POST["ubah"])) {
                     <div class="d-flex flex-column align-items-center">
                         <div>
                             <div>
-                                <label for="" >NAMA</label>
+                                <label for="" >Nama</label>
                             </div>
                             <div>
-                                <input type="text" required name="nama" value="<?=$mhs['nama']?>">
+                                <input type="text" required name="nama" value="<?=$mhs['nama']?>" class="rounded form-control">
                             </div>
                         </div>
                         <div>
                             <div>
-                                <label for="" >MATKUL_DIAJAR</label>
+                                <label for="" >Matkul_diajar</label>
                             </div>
                             <div>
-                                <input type="text" required name="matkul_diajar" value="<?=$mhs['matkul_diajar']?>">
+                                <input type="text" required name="matkul_diajar" value="<?=$mhs['matkul_diajar']?>" class="rounded form-control">
                             </div>
                         </div>
                         <div>
                             <div>
-                                <label for="" >USIA</label>
+                                <label for="" >Usia</label>
                             </div>
                             <div>
-                                <input type="number" required name="usia" value="<?=$mhs['usia']?>">
+                                <input type="number" required name="usia" value="<?=$mhs['usia']?>" class="rounded form-control">
                             </div>
                         </div>
                         <div>
                             <div>
-                                <label for="" >ALAMAT</label>
+                                <label for="" >Alamat</label>
                             </div>
                             <div>
-                                <input type="text" required name="alamat" value="<?=$mhs['alamat']?>">
+                                <input type="text" required name="alamat" value="<?=$mhs['alamat']?>" class="rounded form-control">
                             </div>
                         </div>
                         <div>
                             <div>
-                                <label for="" >GAJI</label>
+                                <label for="" >Gaji</label>
                             </div>
                             <div>
-                                <input type="number" required name="gaji" value="<?=$mhs['gaji']?>">
+                                <input type="number" required name="gaji" value="<?=$mhs['gaji']?>" class="rounded form-control">
                             </div>
                         </div>
-                        <div>
+                        <div class="d-flex flex-column align-items-center">
                             <div>
                                 <label for="" >Foto</label>
                             </div>
                             <img src="img/<?= $mhs['foto']?>" width="50" height="50">
-                            <div>
-                                <input type="file" name="foto">
+                            <div class="form-control form-group my-3">
+                                <input type="file" name="foto" class="rounded form-control">
                             </div>
                         </div>
                         <div class="d-flex justify-content-center">
