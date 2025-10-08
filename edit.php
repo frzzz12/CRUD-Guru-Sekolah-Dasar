@@ -37,64 +37,68 @@ if(isset($_POST["ubah"])) {
     <title>Edit Data Guru</title>
 </head>
 <body>
-    <div>
-        <div>
-            <form action="" method="POST" enctype="multipart/form-data">
-                <input type="hidden" value="<?=$mhs['id']?>">
-                <input type="hidden" name="gambarLama" value="<?=$mhs['foto']?>">
-                <div>
-                    <div>
+    <div class="min-vh-100 d-flex justify-content-center align-items-center">
+        <div class="bg-primary text-white p-4">
+            <div class="d-flex justify-content-center">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" value="<?=$mhs['id']?>">
+                    <input type="hidden" name="gambarLama" value="<?=$mhs['foto']?>">
+                    <div class="d-flex flex-column align-items-center">
                         <div>
-                            <label for="" >NAMA</label>
+                            <div>
+                                <label for="" >NAMA</label>
+                            </div>
+                            <div>
+                                <input type="text" required name="nama" value="<?=$mhs['nama']?>">
+                            </div>
                         </div>
                         <div>
-                            <input type="text" required name="nama" value="<?=$mhs['nama']?>">
+                            <div>
+                                <label for="" >MATKUL_DIAJAR</label>
+                            </div>
+                            <div>
+                                <input type="text" required name="matkul_diajar" value="<?=$mhs['matkul_diajar']?>">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="" >USIA</label>
+                            </div>
+                            <div>
+                                <input type="number" required name="usia" value="<?=$mhs['usia']?>">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="" >ALAMAT</label>
+                            </div>
+                            <div>
+                                <input type="text" required name="alamat" value="<?=$mhs['alamat']?>">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="" >GAJI</label>
+                            </div>
+                            <div>
+                                <input type="number" required name="gaji" value="<?=$mhs['gaji']?>">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="" >Foto</label>
+                            </div>
+                            <img src="img/<?= $mhs['foto']?>" width="50" height="50">
+                            <div>
+                                <input type="file" name="foto">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button class="btn btn-light" name="ubah" type="submit" >Ubah</button>
                         </div>
                     </div>
-                    <div>
-                        <div>
-                            <label for="" >MATKUL_DIAJAR</label>
-                        </div>
-                        <div>
-                            <input type="text" required name="matkul_diajar" value="<?=$mhs['matkul_diajar']?>">
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <label for="" >USIA</label>
-                        </div>
-                        <div>
-                            <input type="number" required name="usia" value="<?=$mhs['usia']?>">
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <label for="" >ALAMAT</label>
-                        </div>
-                        <div>
-                            <input type="text" required name="alamat" value="<?=$mhs['alamat']?>">
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <label for="" >GAJI</label>
-                        </div>
-                        <div>
-                            <input type="number" required name="gaji" value="<?=$mhs['gaji']?>">
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <label for="" >Foto</label>
-                        </div>
-                        <img src="img/<?= $mhs['foto']?>" width="50" height="50">
-                        <div>
-                            <input type="file" name="foto">
-                        </div>
-                    </div>
-                    <button class="btn btn-primary" name="ubah" type="submit" >Ubah</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 </body>
